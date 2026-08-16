@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSITLens — CSIT Entrance Cutoff Information System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1e69b4;
+    --blue-dark:#154d85;
+    --maroon:#8e1b4b;
+    --sky:#0078d2;
+    --rust:#e15a1e;
+    --rust-dark:#a8420f;
+    --red:#f04b0f;
+    --ink:#1c2531;
+    --muted:#5b6472;
+    --faint:#8892a0;
+    --line:#d8dce2;
+    --line-strong:#b9c0cb;
+    --paper:#ffffff;
+    --paper-2:#f5f7fa;
+    --blue-tint:#eaf1fa;
+    --sky-tint:#e7f3fb;
+    --rust-tint:#fdece3;
+    --red-tint:#fde7e0;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;color:var(--ink);
+    background:linear-gradient(180deg, var(--blue-tint) 0%, var(--paper) 18%, var(--paper) 85%, var(--rust-tint) 100%);
+    font-family:'Inter',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width:880px;margin:0 auto;padding:0 40px;}
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible{
+    outline:2px solid var(--blue);outline-offset:2px;
+  }
+
+  /* ---------- top accent stripe ---------- */
+  .top-stripe{height:4px;background:var(--maroon);}
+
+  /* ---------- header ---------- */
+  .site-header{position:sticky;top:0;z-index:50;}
+  header{
+    background:var(--blue);
+  }
+  .headerbar{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;flex-wrap:wrap;gap:10px;}
+  .brand-block .mark{
+    font-family:'Fraunces',serif;font-weight:600;font-size:21px;color:#fff;letter-spacing:-0.01em;
+  }
+  .brand-block .mark span{color:#bfe0ff;}
+
+  nav{display:flex;gap:2px;flex-wrap:wrap;}
+  nav a{
+    display:inline-block;text-decoration:none;color:#eaf1fa;font-size:13px;font-weight:600;
+    padding:9px 14px;text-transform:uppercase;letter-spacing:.03em;transition:.15s;border-radius:4px;
+  }
+  nav a:hover{background:rgba(255,255,255,0.12);color:#fff;}
+  @media (max-width:640px){ nav a{padding:8px 10px;font-size:11.5px;} }
+
+  /* ---------- hero ---------- */
+  .hero{padding:52px 0 40px;}
+  h1{
+    font-family:'Fraunces',serif;font-weight:600;font-size:clamp(30px,4.8vw,42px);
+    line-height:1.18;margin:0 0 14px;color:var(--ink);letter-spacing:-0.01em;
+  }
+  h1 em{color:var(--rust);font-style:normal;font-weight:600;}
+  .sub{color:var(--muted);font-size:15.5px;max-width:64ch;margin:0 0 32px;}
+
+  .panel{
+    padding:8px 0 0;
+  }
+  label.field-label{
+    display:block;font-size:12px;color:var(--muted);margin-bottom:8px;font-weight:700;
+    text-transform:uppercase;letter-spacing:.04em;
+  }
+
+  .rank-row{display:flex;align-items:center;gap:10px;margin-bottom:26px;}
+  .rank-input-shell{
+    display:flex;align-items:center;background:var(--paper);
+    border:1px solid var(--line-strong);border-radius:4px;overflow:hidden;flex:1;
+  }
+  .rank-input-shell input{
+    flex:1;background:transparent;border:0;outline:none;color:var(--ink);
+    font-family:'IBM Plex Mono',monospace;font-size:19px;font-weight:600;padding:12px 14px;width:100%;
+  }
+  .stepper{display:flex;}
+  .stepper button{
+    width:40px;height:44px;background:var(--paper-2);border:0;border-left:1px solid var(--line);
+    color:var(--muted);font-size:18px;cursor:pointer;transition:background .15s,color .15s;
+  }
+  .stepper button:hover{background:var(--blue-tint);color:var(--blue-dark);}
+
+  .field-label-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;}
+  .field-hint{font-size:11.5px;color:var(--faint);text-transform:none;letter-spacing:0;}
+  .selected-list{display:flex;flex-direction:column;gap:0;margin-bottom:14px;border:1px solid var(--line);border-radius:4px;overflow:hidden;}
+  .selected-row{
+    display:flex;align-items:center;gap:12px;
+    background:var(--paper);border-bottom:1px solid var(--line);padding:12px 14px;
+  }
+  .selected-row:last-child{border-bottom:0;}
+  .rank-badge{
+    width:26px;height:26px;flex-shrink:0;border-radius:50%;background:var(--blue);color:#fff;
+    font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .selected-row .name{font-size:14px;font-weight:600;}
+  .selected-row .loc{font-size:12px;color:var(--faint);}
+  .selected-row .info{flex:1;min-width:0;}
+  .reorder-btns{display:flex;flex-direction:column;gap:2px;flex-shrink:0;}
+  .order-btn{
+    background:transparent;border:1px solid var(--line-strong);color:var(--muted);
+    width:22px;height:18px;border-radius:3px;cursor:pointer;font-size:10px;line-height:1;
+    display:flex;align-items:center;justify-content:center;transition:.15s;
+  }
+  .order-btn:hover:not(:disabled){border-color:var(--blue);color:var(--blue-dark);}
+  .order-btn:disabled{opacity:0.3;cursor:default;}
+  .remove-btn{
+    background:transparent;border:1px solid var(--line-strong);color:var(--muted);
+    width:26px;height:26px;border-radius:3px;cursor:pointer;font-size:14px;line-height:1;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.15s;
+  }
+  .remove-btn:hover{border-color:var(--red);color:var(--red);}
+  .empty-note{
+    font-size:13px;color:var(--faint);padding:14px;border:1px dashed var(--line-strong);
+    border-radius:4px;text-align:center;margin-bottom:14px;background:var(--paper);
+  }
+  .error-note{
+    font-size:13px;color:var(--red);padding:14px;border:1px solid var(--red);
+    border-radius:4px;text-align:center;margin-bottom:14px;background:var(--red-tint);
+  }
+  .loading-note{
+    font-size:13px;color:var(--muted);padding:14px;border:1px dashed var(--line-strong);
+    border-radius:4px;text-align:center;margin-bottom:14px;background:var(--paper);
+  }
+
+  .add-row{display:flex;gap:8px;}
+  select{
+    flex:1;background:var(--paper);border:1px solid var(--line-strong);
+    color:var(--ink);border-radius:4px;padding:0 12px;height:42px;font-size:13.5px;font-family:inherit;
+  }
+  .btn-add{
+    background:var(--paper);border:1px solid var(--line-strong);color:var(--ink);
+    border-radius:4px;padding:0 18px;font-size:13.5px;font-weight:600;cursor:pointer;transition:.15s;
+  }
+  .btn-add:hover{border-color:var(--blue);color:var(--blue-dark);}
+  .btn-add:disabled, select:disabled{opacity:.5;cursor:default;}
+
+  .cta-row{margin-top:22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--blue);color:#fff;border:0;border-radius:4px;
+    padding:13px 28px;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;
+    font-family:inherit;text-transform:uppercase;letter-spacing:.03em;
+  }
+  .btn-primary:hover{background:var(--blue-dark);}
+  .btn-primary:disabled{opacity:.6;cursor:default;}
+  .basis-note{font-size:12px;color:var(--faint);}
+
+  /* ---------- section headings ---------- */
+  section{padding:52px 0;}
+  section.divider{border-top:1px solid var(--line);}
+  section.section-alt{background:rgba(28,37,49,0.03);}
+  .section-head{margin-bottom:26px;padding-bottom:14px;border-bottom:2px solid var(--blue);}
+  .section-head h2{
+    font-family:'Fraunces',serif;font-weight:600;font-size:23px;margin:0 0 6px;color:var(--ink);
+  }
+  .section-head p{color:var(--muted);font-size:14px;margin:0;max-width:64ch;}
+
+  /* ---------- shortlist table ---------- */
+  .ticket-list{}
+  .rank-table-head{display:flex;background:var(--paper-2);border-bottom:1px solid var(--line-strong);}
+  .rank-table-head .col-cutoff{width:92px;flex-shrink:0;padding:9px 12px;border-right:1px solid var(--line);text-align:center;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;}
+  .rank-table-head .col-main{flex:1;padding:9px 16px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  .rank-table-head .col-main .lab{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;}
+  .rank-table-head .col-side{display:flex;align-items:center;gap:14px;flex-shrink:0;}
+  .rank-table-head .col-gap{width:64px;text-align:right;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;}
+  .rank-table-head .col-chance{width:140px;text-align:center;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;}
+  .ticket{display:flex;border-bottom:1px solid var(--line);}
+  .ticket:last-child{border-bottom:0;}
+  .ticket:nth-child(even) .body{background:var(--paper-2);}
+  .ticket .stub{
+    width:92px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:15px 12px;border-right:1px solid var(--line);background:var(--paper-2);
+  }
+  .stub .num{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:18px;color:var(--ink);}
+  .stub .lbl{font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.04em;margin-top:2px;}
+  .ticket .body{flex:1;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:var(--paper);}
+  .ticket .info .college{font-size:15px;font-weight:600;margin:0 0 3px;color:var(--ink);}
+  .ticket .info .loc{font-size:12px;color:var(--faint);margin:0;}
+  .ticket .side{display:flex;align-items:center;gap:14px;flex-shrink:0;}
+  .ticket .gapval{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted);width:64px;text-align:right;}
+  .badge{
+    padding:4px 10px;border-radius:3px;font-size:12px;font-weight:700;white-space:nowrap;
+    text-align:center;width:140px;border:1px solid transparent;
+  }
+  .tone-safe{background:var(--sky);color:#fff;}
+  .tone-gold{background:var(--blue);color:#fff;}
+  .tone-moderate{background:var(--maroon);color:#fff;}
+  .tone-reach{background:var(--rust);color:#fff;}
+  .tone-danger{background:var(--red);color:#fff;}
+  .tone-unknown{background:var(--faint);color:#fff;}
+
+  /* ---------- recommendations ---------- */
+  .rec-list{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:4px;overflow:hidden;}
+  .rec-row{
+    display:flex;align-items:center;gap:16px;background:var(--paper);
+    border-bottom:1px solid var(--line);border-left:4px solid var(--line-strong);padding:14px 18px;
+  }
+  .rec-row:last-child{border-bottom:0;}
+  .rec-row.tone-safe{border-left-color:var(--sky);}
+  .rec-row.tone-gold{border-left-color:var(--blue);}
+  .rec-row.tone-moderate{border-left-color:var(--maroon);}
+  .rec-row.tone-reach{border-left-color:var(--rust);}
+  .rec-row.tone-danger{border-left-color:var(--red);}
+  .rec-row .rec-main{flex:1;min-width:0;}
+  .rec-row .college{font-size:14.5px;font-weight:700;margin:0 0 2px;color:var(--ink);}
+  .rec-row .loc{font-size:12px;color:var(--faint);margin:0;}
+  .rec-row .cutoff{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);white-space:nowrap;}
+  .rec-row .pill{
+    font-size:11px;font-weight:700;padding:5px 12px;border-radius:3px;white-space:nowrap;
+    text-transform:uppercase;letter-spacing:.03em;border:1px solid transparent;
+  }
+
+  /* ---------- how it works ---------- */
+  .steps{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden;}
+  .step{display:flex;gap:16px;padding:18px 20px;background:var(--paper);border-bottom:1px solid var(--line);}
+  .step:last-child{border-bottom:0;}
+  .step .num{
+    font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;color:var(--blue-dark);
+    width:34px;flex-shrink:0;background:var(--blue-tint);border:1px solid var(--line);
+    border-radius:3px;height:28px;display:flex;align-items:center;justify-content:center;
+  }
+  .step h3{margin:0 0 4px;font-size:14.5px;font-weight:700;}
+  .step p{margin:0;color:var(--muted);font-size:13.5px;max-width:60ch;}
+
+  /* ---------- best college callout ---------- */
+  .best-callout{
+    display:flex;align-items:center;gap:16px;background:var(--blue-tint);
+    border:1px solid var(--blue);border-radius:4px;padding:18px 20px;margin-bottom:26px;
+  }
+  .best-callout .tag{
+    font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--blue-dark);
+    background:#fff;border:1px solid var(--blue);border-radius:3px;padding:4px 9px;flex-shrink:0;
+  }
+  .best-callout .info{flex:1;min-width:0;}
+  .best-callout .college{font-size:15px;font-weight:700;margin:0 0 2px;color:var(--ink);}
+  .best-callout .detail{font-size:12.5px;color:var(--muted);margin:0;}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--line);padding:26px 0 22px;background:rgba(28,37,49,0.03);}
+  .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:16px;}
+  .foot-brand .mark{font-family:'Fraunces',serif;font-weight:600;font-size:17px;color:var(--ink);}
+  .foot-brand .mark span{color:var(--blue);}
+  .foot-brand p{color:var(--faint);font-size:12.5px;max-width:32ch;margin:8px 0 0;}
+  .foot-links{display:flex;gap:40px;flex-wrap:wrap;}
+  .foot-col h4{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--faint);margin:0 0 10px;}
+  .foot-col a{display:block;font-size:13px;color:var(--muted);text-decoration:none;margin-bottom:8px;}
+  .foot-col a:hover{color:var(--blue-dark);}
+  .disclaimer{
+    border-top:1px solid var(--line);padding-top:14px;font-size:12px;color:var(--muted);line-height:1.5;
+  }
+  .disclaimer strong{color:var(--ink);}
+</style>
+</head>
+<body>
+
+<div class="top-stripe"></div>
+
+<div class="site-header">
+<header>
+  <div class="headerbar wrap" style="padding-left:0;padding-right:0;">
+    <div class="brand-block">
+      <div class="mark">CSIT<span>Lens</span></div>
+    </div>
+    <nav>
+      <a href="#evaluate">Check My Rank</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#recommendations">Recommendations</a>
+    </nav>
+  </div>
+</header>
+</div>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <section class="hero" id="evaluate">
+    <h1>Know your odds <em>before</em> you apply.</h1>
+    <p class="sub">Not sure which CSIT college you can get into? Enter your entrance rank, select the colleges you're considering, and explore your admission chances based on a model trained on real admission outcomes.</p>
+
+    <div class="panel">
+      <label class="field-label" for="rankInput">Entrance rank</label>
+      <div class="rank-row">
+        <div class="rank-input-shell">
+          <input type="number" id="rankInput" value="1000" min="1"/>
+          <div class="stepper">
+            <button onclick="adjustRank(-1)" aria-label="Decrease rank">–</button>
+            <button onclick="adjustRank(1)" aria-label="Increase rank">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="field-label-row">
+        <label class="field-label" style="margin-bottom:0;">Your priority colleges</label>
+        <span class="field-hint" id="countHint"></span>
+      </div>
+      <div class="selected-list" id="selectedList"></div>
+      <div class="add-row">
+        <select id="collegeSelect" disabled><option value="">Loading colleges…</option></select>
+        <button class="btn-add" id="addBtn" onclick="addCollege()" disabled>Add college</button>
+      </div>
+
+      <div class="cta-row">
+        <button class="btn-primary" id="evalBtn" onclick="evaluateNow()">Evaluate My Chances</button>
+        <span class="basis-note" id="basisNote">Loading college list…</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- YOUR SHORTLIST -->
+  <section class="divider">
+    <div class="section-head">
+      <h2>Where your priority list stands</h2>
+      <p>Each entry compares your rank against that program's cutoff, using a model trained on real admission outcomes.</p>
+    </div>
+    <div id="bestCallout"></div>
+    <div class="ticket-list">
+      <div class="rank-table-head">
+        <div class="col-cutoff"></div>
+        <div class="col-main">
+          <span class="lab">College</span>
+          <div class="col-side">
+            <span class="col-gap">Rank gap</span>
+            <span class="col-chance">Chance</span>
+          </div>
+        </div>
+      </div>
+      <div id="ticketList"><div class="empty-note">Add colleges above and select "Evaluate My Chances" to see them scored here.</div></div>
+    </div>
+  </section>
+
+  <!-- RECOMMENDATIONS -->
+  <section class="divider" id="recommendations">
+    <div class="section-head">
+      <h2>Where your rank fits</h2>
+      <p>Colleges matched to your rank level, based on the source college your rank is most competitive for.</p>
+    </div>
+    <div class="rec-list" id="recList"><div class="empty-note">Evaluate your rank above to see recommendations here.</div></div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="divider" id="how-it-works">
+    <div class="section-head">
+      <h2>How this works</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <div><h3>Enter your rank</h3><p>The single number from your entrance exam result, that's all this needs to start comparing.</p></div>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <div><h3>We compare it to real cutoffs</h3><p>Your rank is checked against each college's cutoff, using a classifier trained on genuine admit/reject outcomes from past priority lists.</p></div>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <div><h3>Get a realistic read</h3><p>Each program is labelled Very Low, Low, Moderate, High, or Very High, so you can build a shortlist with balance.</p></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="mark">CSIT<span>Lens</span></div>
+        <p>An independent reference for comparing entrance rank against past cutoffs.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>Product</h4>
+          <a href="#evaluate">Check my rank</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#recommendations">Recommendations</a>
+        </div>
+        <div class="foot-col">
+          <h4>About</h4>
+          <a href="#">Where the cutoffs come from</a>
+          <a href="#">Contact us</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> CSITLens is an independent student resource, not affiliated with or endorsed by any university, campus, or government body. Cutoff ranks shift each admission cycle, so treat these figures as a planning guide, not a guarantee. For official results, always check with the concerned university or campus.
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

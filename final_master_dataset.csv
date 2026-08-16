@@ -1,0 +1,240 @@
+College,Year,Cutoff_Rank,Best_Rank,Avg_Rank,Num_Admitted,Cutoff_Diff_YoY,Rolling_Avg_Cutoff,Cutoff_Trend,Cutoff_Volatility,Years_of_Data,Cutoff_Percentile,College_Master_Rank,Rank_Category,Is_Outlier_Cutoff
+"AIMS College, Biratnagar",2079,4313,1797,3446.1,29,,4313.0,-183.8,568.2,4,0.917,53,Lower-tier,False
+"AIMS College, Biratnagar",2080,3182,682,2581.3,29,-1131,3747.5,-183.8,568.2,4,0.833,53,Lower-tier,False
+"AIMS College, Biratnagar",2081,3081,560,2569.4,29,-101,3131.5,-183.8,568.2,4,0.763,53,Lower-tier,False
+"AIMS College, Biratnagar",2082,3734,737,2850.6,29,653,3407.5,-183.8,568.2,4,0.883,53,Lower-tier,False
+"Academia International College, Gwarko",2079,2616,920,2095.1,38,,2616.0,-69.0,133.8,4,0.533,37,Mid-tier,False
+"Academia International College, Gwarko",2080,2372,601,1867.2,38,-244,2494.0,-69.0,133.8,4,0.65,37,Mid-tier,False
+"Academia International College, Gwarko",2081,2306,638,1595.7,38,-66,2339.0,-69.0,133.8,4,0.593,37,Mid-tier,False
+"Academia International College, Gwarko",2082,2408,1115,1962.4,38,102,2357.0,-69.0,133.8,4,0.633,37,Mid-tier,False
+"Ambikeshwori Campus, Dang",2079,4072,337,2425.2,29,,4072.0,-448.1,867.9,4,0.867,59,Lower-tier,False
+"Ambikeshwori Campus, Dang",2080,4201,488,3169.0,29,129,4136.5,-448.1,867.9,4,0.983,59,Lower-tier,False
+"Ambikeshwori Campus, Dang",2081,4403,549,3377.9,29,202,4302.0,-448.1,867.9,4,0.915,59,Lower-tier,False
+"Ambikeshwori Campus, Dang",2082,2511,42,1491.2,29,-1892,3457.0,-448.1,867.9,4,0.667,59,Lower-tier,False
+"Ambition College, Baneshwor",2079,2632,847,2075.6,29,,2632.0,-247.7,419.2,4,0.55,26,Mid-tier,False
+"Ambition College, Baneshwor",2080,1776,501,1196.2,29,-856,2204.0,-247.7,419.2,4,0.317,26,Mid-tier,False
+"Ambition College, Baneshwor",2081,2056,238,1505.7,29,280,1916.0,-247.7,419.2,4,0.475,26,Mid-tier,False
+"Ambition College, Baneshwor",2082,1713,595,1275.0,29,-343,1884.5,-247.7,419.2,4,0.317,26,Mid-tier,False
+"Amrit Campus, Lainchaur",2079,358,3,178.7,115,,358.0,33.7,56.5,4,0.017,1,Top-tier,False
+"Amrit Campus, Lainchaur",2080,317,2,162.2,115,-41,337.5,33.7,56.5,4,0.033,1,Top-tier,True
+"Amrit Campus, Lainchaur",2081,372,8,182.6,115,55,344.5,33.7,56.5,4,0.034,1,Top-tier,False
+"Amrit Campus, Lainchaur",2082,452,5,212.8,114,80,412.0,33.7,56.5,4,0.017,1,Top-tier,False
+"Asian College of Higher Studies, Jaulakhel",2079,2195,468,1523.5,38,,2195.0,40.8,101.9,4,0.367,32,Mid-tier,False
+"Asian College of Higher Studies, Jaulakhel",2080,2091,380,1571.2,38,-104,2143.0,40.8,101.9,4,0.5,32,Mid-tier,False
+"Asian College of Higher Studies, Jaulakhel",2081,2334,880,1718.9,38,243,2212.5,40.8,101.9,4,0.61,32,Mid-tier,False
+"Asian College of Higher Studies, Jaulakhel",2082,2250,790,1856.1,38,-84,2292.0,40.8,101.9,4,0.55,32,Mid-tier,False
+"Asian School of Management, Samakhusi",2079,2637,601,1860.9,38,,2637.0,-63.0,188.1,3,0.567,39,Mid-tier,False
+"Asian School of Management, Samakhusi",2080,2267,749,1693.1,38,-370,2452.0,-63.0,188.1,3,0.583,39,Mid-tier,False
+"Asian School of Management, Samakhusi",2081,2511,513,1901.9,38,244,2389.0,-63.0,188.1,3,0.695,39,Mid-tier,False
+"Banke Bageshwori Campus, Nepalgunj",2079,4321,823,3238.0,29,,4321.0,85.1,458.7,4,0.933,61,Lower-tier,False
+"Banke Bageshwori Campus, Nepalgunj",2080,3905,1197,3061.4,29,-416,4113.0,85.1,458.7,4,0.95,61,Lower-tier,False
+"Banke Bageshwori Campus, Nepalgunj",2081,4999,1838,4190.6,29,1094,4452.0,85.1,458.7,4,0.966,61,Lower-tier,True
+"Banke Bageshwori Campus, Nepalgunj",2082,4240,1704,3440.9,29,-759,4619.5,85.1,458.7,4,0.95,61,Lower-tier,False
+"Bhairahawa Multiple Campus, Bhairahawa",2079,2165,782,1686.4,58,,2165.0,51.3,192.1,4,0.333,29,Mid-tier,False
+"Bhairahawa Multiple Campus, Bhairahawa",2080,1905,877,1458.2,58,-260,2035.0,51.3,192.1,4,0.433,29,Mid-tier,False
+"Bhairahawa Multiple Campus, Bhairahawa",2081,2373,9,1234.9,144,468,2139.0,51.3,192.1,4,0.644,29,Mid-tier,False
+"Bhairahawa Multiple Campus, Bhairahawa",2082,2180,50,1630.9,86,-193,2276.5,51.3,192.1,4,0.5,29,Mid-tier,False
+"Bhaktapur Multiple Campus, Bhaktapur",2079,574,2,418.4,58,,574.0,12.64,76.4,3,0.067,4,Top-tier,False
+"Bhaktapur Multiple Campus, Bhaktapur",2080,447,1,327.5,58,-127,510.5,12.64,76.4,3,0.067,4,Top-tier,False
+"Bhaktapur Multiple Campus, Bhaktapur",2082,584,19,462.1,58,137,515.5,12.64,76.4,3,0.067,4,Top-tier,False
+"Birat Kshitiz College, Biratnagar",2079,4759,1460,3693.3,29,,4759.0,-265.0,498.7,4,0.983,60,Lower-tier,False
+"Birat Kshitiz College, Biratnagar",2080,3663,1606,3193.1,29,-1096,4211.0,-265.0,498.7,4,0.933,60,Lower-tier,False
+"Birat Kshitiz College, Biratnagar",2081,3845,995,3161.6,29,182,3754.0,-265.0,498.7,4,0.898,60,Lower-tier,False
+"Birat Kshitiz College, Biratnagar",2082,3815,175,2992.1,29,-30,3830.0,-265.0,498.7,4,0.917,60,Lower-tier,False
+"Birat Multiple College, Biratnagar",2079,4171,1232,2759.6,29,,4171.0,-112.7,360.1,4,0.883,57,Lower-tier,False
+"Birat Multiple College, Biratnagar",2080,3415,366,2622.7,29,-756,3793.0,-112.7,360.1,4,0.867,57,Lower-tier,False
+"Birat Multiple College, Biratnagar",2081,3422,754,2523.4,29,7,3418.5,-112.7,360.1,4,0.831,57,Lower-tier,False
+"Birat Multiple College, Biratnagar",2082,3793,847,2996.6,29,371,3607.5,-112.7,360.1,4,0.9,57,Lower-tier,False
+"Birendra Memorial College, Dharan",2079,3460,1379,2667.7,38,,3460.0,-164.1,477.3,4,0.8,49,Lower-tier,False
+"Birendra Memorial College, Dharan",2080,2390,427,1836.1,38,-1070,2925.0,-164.1,477.3,4,0.667,49,Lower-tier,False
+"Birendra Memorial College, Dharan",2081,2525,750,1919.6,38,135,2457.5,-164.1,477.3,4,0.712,49,Lower-tier,False
+"Birendra Memorial College, Dharan",2082,2868,821,2078.9,38,343,2696.5,-164.1,477.3,4,0.8,49,Lower-tier,False
+"Birendra Multiple Campus, Bharatpur, Chitwan",2079,973,8,524.4,58,,973.0,-57.0,97.9,4,0.117,6,Top-tier,False
+"Birendra Multiple Campus, Bharatpur, Chitwan",2080,770,40,536.8,58,-203,871.5,-57.0,97.9,4,0.1,6,Top-tier,False
+"Birendra Multiple Campus, Bharatpur, Chitwan",2081,785,12,455.1,58,15,777.5,-57.0,97.9,4,0.068,6,Top-tier,False
+"Birendra Multiple Campus, Bharatpur, Chitwan",2082,778,2,389.6,58,-7,781.5,-57.0,97.9,4,0.083,6,Top-tier,False
+"Butwal Multiple Campus, Butwal",2079,1215,16,765.5,58,,1215.0,-35.4,112.1,4,0.15,9,Top-tier,False
+"Butwal Multiple Campus, Butwal",2080,952,15,615.9,58,-263,1083.5,-35.4,112.1,4,0.133,9,Top-tier,False
+"Butwal Multiple Campus, Butwal",2081,1120,32,692.8,58,168,1036.0,-35.4,112.1,4,0.136,9,Top-tier,False
+"Butwal Multiple Campus, Butwal",2082,1041,3,544.2,58,-79,1080.5,-35.4,112.1,4,0.117,9,Top-tier,False
+"Central Campus of Technology, Dharan",2079,1289,77,1005.4,29,,1289.0,-45.9,83.5,4,0.167,10,Top-tier,False
+"Central Campus of Technology, Dharan",2080,1115,89,759.2,29,-174,1202.0,-45.9,83.5,4,0.167,10,Top-tier,False
+"Central Campus of Technology, Dharan",2081,1190,118,818.4,29,75,1152.5,-45.9,83.5,4,0.169,10,Top-tier,False
+"Central Campus of Technology, Dharan",2082,1111,21,658.5,29,-79,1150.5,-45.9,83.5,4,0.15,10,Top-tier,False
+"Chitwan College of Technology, Chitwan",2080,2038,924,1541.3,29,,2038.0,-320.0,349.4,3,0.483,15,Top-tier,False
+"Chitwan College of Technology, Chitwan",2081,1475,268,1173.0,29,-563,1756.5,-320.0,349.4,3,0.22,15,Top-tier,False
+"Chitwan College of Technology, Chitwan",2082,1398,266,1031.1,29,-77,1436.5,-320.0,349.4,3,0.233,15,Top-tier,False
+"College of Applied Business and Technology, Tangal",2081,2502,530,1806.5,29,,2502.0,,,1,0.678,41,Mid-tier,False
+"College of Applied Business, Tangal",2079,2677,316,1746.4,29,,2677.0,30.64,247.7,3,0.583,43,Lower-tier,False
+"College of Applied Business, Tangal",2080,2248,842,1868.2,29,-429,2462.5,30.64,247.7,3,0.55,43,Lower-tier,False
+"College of Applied Business, Tangal",2082,2677,936,2377.7,29,429,2462.5,30.64,247.7,3,0.767,43,Lower-tier,False
+"Deerwalk Institute of Technology, Sifal",2079,1632,124,958.5,38,,1632.0,125.8,240.5,4,0.25,17,Top-tier,False
+"Deerwalk Institute of Technology, Sifal",2080,1591,170,1007.6,38,-41,1611.5,125.8,240.5,4,0.217,17,Top-tier,False
+"Deerwalk Institute of Technology, Sifal",2081,1547,73,1074.4,38,-44,1569.0,125.8,240.5,4,0.254,17,Top-tier,False
+"Deerwalk Institute of Technology, Sifal",2082,2066,20,1263.9,38,519,1806.5,125.8,240.5,4,0.45,17,Top-tier,False
+"Godawari College, Itahari",2079,4036,879,2656.7,29,,4036.0,-353.8,563.1,4,0.85,50,Lower-tier,False
+"Godawari College, Itahari",2080,2996,392,2143.7,29,-1040,3516.0,-353.8,563.1,4,0.8,50,Lower-tier,False
+"Godawari College, Itahari",2081,3352,670,2628.3,29,356,3174.0,-353.8,563.1,4,0.814,50,Lower-tier,False
+"Godawari College, Itahari",2082,2738,113,1816.8,29,-614,3045.0,-353.8,563.1,4,0.783,50,Lower-tier,False
+"Hetauda City College, Hetauda",2079,3119,55,2093.6,29,,3119.0,-231.1,331.3,4,0.75,47,Lower-tier,False
+"Hetauda City College, Hetauda",2080,2912,321,2154.1,29,-207,3015.5,-231.1,331.3,4,0.783,47,Lower-tier,False
+"Hetauda City College, Hetauda",2081,2416,171,1656.7,29,-496,2664.0,-231.1,331.3,4,0.661,47,Lower-tier,False
+"Hetauda City College, Hetauda",2082,2514,413,1719.8,29,98,2465.0,-231.1,331.3,4,0.683,47,Lower-tier,False
+"Himalaya College of Engineering, Sankhamul",2079,2177,507,1552.1,38,,2177.0,-155.8,293.7,4,0.35,19,Top-tier,False
+"Himalaya College of Engineering, Sankhamul",2080,1740,348,1239.0,38,-437,1958.5,-155.8,293.7,4,0.3,19,Top-tier,False
+"Himalaya College of Engineering, Sankhamul",2081,1466,415,1035.0,38,-274,1603.0,-155.8,293.7,4,0.203,19,Top-tier,False
+"Himalaya College of Engineering, Sankhamul",2082,1749,643,1374.3,38,283,1607.5,-155.8,293.7,4,0.333,19,Top-tier,False
+"Himalaya Darshan College, Biratnagar",2079,3599,263,2178.5,29,,3599.0,-83.6,186.4,4,0.817,51,Lower-tier,False
+"Himalaya Darshan College, Biratnagar",2080,3205,53,2175.7,29,-394,3402.0,-83.6,186.4,4,0.85,51,Lower-tier,False
+"Himalaya Darshan College, Biratnagar",2081,3203,755,2100.5,29,-2,3204.0,-83.6,186.4,4,0.78,51,Lower-tier,False
+"Himalaya Darshan College, Biratnagar",2082,3321,564,2117.8,29,118,3262.0,-83.6,186.4,4,0.817,51,Lower-tier,False
+"Indreni College, Chitwan",2079,2265,1021,1730.1,29,,2265.0,,,1,0.417,34,Mid-tier,False
+"Kathford International College of Engineering and Management, Balkumari",2079,1547,41,1110.3,38,,1547.0,-75.5,178.1,4,0.217,11,Top-tier,False
+"Kathford International College of Engineering and Management, Balkumari",2080,1249,360,932.7,38,-298,1398.0,-75.5,178.1,4,0.183,11,Top-tier,False
+"Kathford International College of Engineering and Management, Balkumari",2081,1124,338,776.5,38,-125,1186.5,-75.5,178.1,4,0.153,11,Top-tier,False
+"Kathford International College of Engineering and Management, Balkumari",2082,1337,619,996.6,38,213,1230.5,-75.5,178.1,4,0.217,11,Top-tier,False
+"Kathmandu Bernhardt College, Bafal",2079,2720,549,2073.8,38,,2720.0,-173.1,385.3,4,0.6,33,Mid-tier,False
+"Kathmandu Bernhardt College, Bafal",2080,2118,450,1603.7,38,-602,2419.0,-173.1,385.3,4,0.517,33,Mid-tier,False
+"Kathmandu Bernhardt College, Bafal",2081,1791,365,1307.7,38,-327,1954.5,-173.1,385.3,4,0.356,33,Mid-tier,False
+"Kathmandu Bernhardt College, Bafal",2082,2252,546,1482.4,76,461,2021.5,-173.1,385.3,4,0.567,33,Mid-tier,False
+"Kathmandu College of Technology, Bhaktapur",2079,2600,1052,2092.4,29,,2600.0,-148.2,285.2,4,0.517,31,Mid-tier,False
+"Kathmandu College of Technology, Bhaktapur",2080,1979,649,1376.8,29,-621,2289.5,-148.2,285.2,4,0.467,31,Mid-tier,False
+"Kathmandu College of Technology, Bhaktapur",2081,2246,536,1582.6,29,267,2112.5,-148.2,285.2,4,0.559,31,Mid-tier,False
+"Kathmandu College of Technology, Bhaktapur",2082,2017,612,1551.7,29,-229,2131.5,-148.2,285.2,4,0.433,31,Mid-tier,False
+"Lumbini City College, Butwal",2079,3187,1818,2701.3,29,,3187.0,-154.6,284.4,4,0.767,48,Lower-tier,False
+"Lumbini City College, Butwal",2080,2584,832,1987.4,29,-603,2885.5,-154.6,284.4,4,0.7,48,Lower-tier,False
+"Lumbini City College, Butwal",2081,2835,1285,2394.9,29,251,2709.5,-154.6,284.4,4,0.746,48,Lower-tier,False
+"Lumbini City College, Butwal",2082,2588,940,2042.2,29,-247,2711.5,-154.6,284.4,4,0.7,48,Lower-tier,False
+"Lumbini ICT College, Gaindakota",2079,2391,624,1654.5,38,,2391.0,-199.8,309.6,4,0.467,27,Mid-tier,False
+"Lumbini ICT College, Gaindakota",2080,2364,499,1631.4,38,-27,2377.5,-199.8,309.6,4,0.633,27,Mid-tier,False
+"Lumbini ICT College, Gaindakota",2081,1782,337,1395.0,38,-582,2073.0,-199.8,309.6,4,0.339,27,Mid-tier,False
+"Lumbini ICT College, Gaindakota",2082,1919,801,1435.0,38,137,1850.5,-199.8,309.6,4,0.4,27,Mid-tier,False
+"Madan Bhandari Memorial College, Binayaknagar",2079,735,108,594.3,38,,735.0,35.9,80.4,4,0.083,5,Top-tier,False
+"Madan Bhandari Memorial College, Binayaknagar",2080,696,386,560.3,38,-39,715.5,35.9,80.4,4,0.083,5,Top-tier,False
+"Madan Bhandari Memorial College, Binayaknagar",2081,881,53,641.3,38,185,788.5,35.9,80.4,4,0.085,5,Top-tier,False
+"Madan Bhandari Memorial College, Binayaknagar",2082,793,432,655.3,38,-88,837.0,35.9,80.4,4,0.1,5,Top-tier,False
+"Mahendra Morang Adarsh M. Campus, Biratnagar",2079,1307,111,852.0,29,,1307.0,259.3,366.6,4,0.183,20,Top-tier,False
+"Mahendra Morang Adarsh M. Campus, Biratnagar",2080,1898,349,1227.9,58,591,1602.5,259.3,366.6,4,0.417,20,Top-tier,False
+"Mahendra Morang Adarsh M. Campus, Biratnagar",2081,1860,280,1203.0,58,-38,1879.0,259.3,366.6,4,0.407,20,Top-tier,False
+"Mahendra Morang Adarsh M. Campus, Biratnagar",2082,2184,83,1316.2,58,324,2022.0,259.3,366.6,4,0.517,20,Top-tier,False
+"Mahendra Multiple Campus, Dang",2079,2930,152,2070.8,29,,2930.0,-412.2,945.7,4,0.7,45,Lower-tier,False
+"Mahendra Multiple Campus, Dang",2080,2803,382,1989.6,29,-127,2866.5,-412.2,945.7,4,0.767,45,Lower-tier,False
+"Mahendra Multiple Campus, Dang",2081,3538,798,2626.3,29,735,3170.5,-412.2,945.7,4,0.847,45,Lower-tier,False
+"Mahendra Multiple Campus, Dang",2082,1311,41,638.1,29,-2227,2424.5,-412.2,945.7,4,0.183,45,Lower-tier,False
+"Mahendra Multiple Campus, Nepalgunj",2079,3104,1367,2453.2,29,,3104.0,283.3,677.0,4,0.733,58,Lower-tier,False
+"Mahendra Multiple Campus, Nepalgunj",2080,3470,303,2395.3,58,366,3287.0,283.3,677.0,4,0.9,58,Lower-tier,False
+"Mahendra Multiple Campus, Nepalgunj",2081,4683,39,3161.1,58,1213,4076.5,283.3,677.0,4,0.949,58,Lower-tier,False
+"Mahendra Multiple Campus, Nepalgunj",2082,3644,623,2622.6,58,-1039,4163.5,283.3,677.0,4,0.867,58,Lower-tier,False
+"Mechi Multiple Campus, Bhadrapur, Jhapa",2079,1543,185,1020.9,29,,1543.0,91.5,140.9,4,0.2,18,Top-tier,False
+"Mechi Multiple Campus, Bhadrapur, Jhapa",2080,1800,119,1043.2,58,257,1671.5,91.5,140.9,4,0.367,18,Top-tier,False
+"Mechi Multiple Campus, Bhadrapur, Jhapa",2081,1731,19,944.6,58,-69,1765.5,91.5,140.9,4,0.322,18,Top-tier,False
+"Mechi Multiple Campus, Bhadrapur, Jhapa",2082,1871,196,1031.7,58,140,1801.0,91.5,140.9,4,0.367,18,Top-tier,False
+"Mount Annapurna College, Pokhara",2079,2820,903,1824.1,29,,2820.0,-128.3,452.8,4,0.65,38,Mid-tier,False
+"Mount Annapurna College, Pokhara",2080,2596,1025,1938.6,29,-224,2708.0,-128.3,452.8,4,0.733,38,Mid-tier,False
+"Mount Annapurna College, Pokhara",2081,1805,1100,1471.8,29,-791,2200.5,-128.3,452.8,4,0.373,38,Mid-tier,False
+"Mount Annapurna College, Pokhara",2082,2656,1218,1996.7,29,851,2230.5,-128.3,452.8,4,0.733,38,Mid-tier,False
+"NIST College, Banepa",2079,2886,63,2022.7,29,,2886.0,-75.3,306.3,4,0.683,42,Mid-tier,False
+"NIST College, Banepa",2080,2257,312,1654.8,29,-629,2571.5,-75.3,306.3,4,0.567,42,Mid-tier,False
+"NIST College, Banepa",2081,2263,187,1559.3,29,6,2260.0,-75.3,306.3,4,0.576,42,Mid-tier,False
+"NIST College, Banepa",2082,2633,181,1913.5,29,370,2448.0,-75.3,306.3,4,0.717,42,Mid-tier,False
+"Nagarjuna College of Information Tech, Sankhamul",2079,1626,740,1192.2,29,,1626.0,151.3,202.1,4,0.233,21,Top-tier,False
+"Nagarjuna College of Information Tech, Sankhamul",2080,1788,309,1262.3,29,162,1707.0,151.3,202.1,4,0.333,21,Top-tier,False
+"Nagarjuna College of Information Tech, Sankhamul",2081,1843,532,1436.0,29,55,1815.5,151.3,202.1,4,0.39,21,Top-tier,False
+"Nagarjuna College of Information Tech, Sankhamul",2082,2112,712,1583.2,29,269,1977.5,151.3,202.1,4,0.483,21,Top-tier,False
+"National College of Computer Studies, Paknajol",2079,1983,656,1396.9,38,,1983.0,11.6,58.6,4,0.317,24,Mid-tier,False
+"National College of Computer Studies, Paknajol",2080,1863,69,1269.6,38,-120,1923.0,11.6,58.6,4,0.4,24,Mid-tier,False
+"National College of Computer Studies, Paknajol",2081,1958,470,1375.9,38,95,1910.5,11.6,58.6,4,0.441,24,Mid-tier,False
+"National College of Computer Studies, Paknajol",2082,1990,565,1433.6,38,32,1974.0,11.6,58.6,4,0.417,24,Mid-tier,False
+"National Infotech College, Birgunj",2079,4902,2077,3673.1,29,,4902.0,-28.4,345.6,4,1.0,63,Lower-tier,False
+"National Infotech College, Birgunj",2080,4506,979,3373.1,38,-396,4704.0,-28.4,345.6,4,1.0,63,Lower-tier,False
+"National Infotech College, Birgunj",2081,5251,1107,4186.3,38,745,4878.5,-28.4,345.6,4,0.983,63,Lower-tier,True
+"National Infotech College, Birgunj",2082,4559,598,3522.0,38,-692,4905.0,-28.4,345.6,4,1.0,63,Lower-tier,False
+"Nepalaya College, Kalanki",2079,2857,761,2414.6,29,,2857.0,-134.0,256.6,4,0.667,40,Mid-tier,False
+"Nepalaya College, Kalanki",2080,2296,674,1938.0,29,-561,2576.5,-134.0,256.6,4,0.6,40,Mid-tier,False
+"Nepalaya College, Kalanki",2081,2366,508,1993.0,29,70,2331.0,-134.0,256.6,4,0.627,40,Mid-tier,False
+"Nepalaya College, Kalanki",2082,2387,460,1787.2,29,21,2376.5,-134.0,256.6,4,0.6,40,Mid-tier,False
+"Nepalgunj Campus, Nepalgunj",2079,4738,1137,3634.5,29,,4738.0,53.6,553.9,4,0.967,62,Lower-tier,False
+"Nepalgunj Campus, Nepalgunj",2080,4138,1024,3296.0,29,-600,4438.0,53.6,553.9,4,0.967,62,Lower-tier,False
+"Nepalgunj Campus, Nepalgunj",2081,5445,1633,4527.3,29,1307,4791.5,53.6,553.9,4,1.0,62,Lower-tier,True
+"Nepalgunj Campus, Nepalgunj",2082,4481,1322,3264.7,29,-964,4963.0,53.6,553.9,4,0.983,62,Lower-tier,False
+"Nepathya College, Butwal",2079,3210,759,2424.5,29,,3210.0,-241.1,351.4,4,0.783,46,Lower-tier,False
+"Nepathya College, Butwal",2080,2595,212,1599.0,29,-615,2902.5,-241.1,351.4,4,0.717,46,Lower-tier,False
+"Nepathya College, Butwal",2081,2557,145,1424.3,29,-38,2576.0,-241.1,351.4,4,0.729,46,Lower-tier,False
+"Nepathya College, Butwal",2082,2419,148,1634.4,29,-138,2488.0,-241.1,351.4,4,0.65,46,Lower-tier,False
+"New Summit College, Old Baneshwor",2079,2478,590,1822.2,38,,2478.0,-66.2,223.3,4,0.5,30,Mid-tier,False
+"New Summit College, Old Baneshwor",2080,1936,815,1536.7,38,-542,2207.0,-66.2,223.3,4,0.45,30,Mid-tier,False
+"New Summit College, Old Baneshwor",2081,2144,120,1491.0,38,208,2040.0,-66.2,223.3,4,0.492,30,Mid-tier,False
+"New Summit College, Old Baneshwor",2082,2188,222,1684.8,38,44,2166.0,-66.2,223.3,4,0.533,30,Mid-tier,False
+"Nihareeka College, Biratnagar",2079,3694,220,2287.5,29,,3694.0,69.3,163.3,4,0.833,56,Lower-tier,False
+"Nihareeka College, Biratnagar",2080,3446,619,2699.6,29,-248,3570.0,69.3,163.3,4,0.883,56,Lower-tier,False
+"Nihareeka College, Biratnagar",2081,3734,615,2796.3,29,288,3590.0,69.3,163.3,4,0.881,56,Lower-tier,False
+"Nihareeka College, Biratnagar",2082,3829,358,2925.7,29,95,3781.5,69.3,163.3,4,0.933,56,Lower-tier,False
+"Orchid International College, Gaushala",2079,2238,660,1489.7,38,,2238.0,-90.0,266.2,4,0.4,22,Mid-tier,False
+"Orchid International College, Gaushala",2080,1633,379,1073.2,38,-605,1935.5,-90.0,266.2,4,0.233,22,Mid-tier,False
+"Orchid International College, Gaushala",2081,1729,300,1286.3,38,96,1681.0,-90.0,266.2,4,0.305,22,Mid-tier,False
+"Orchid International College, Gaushala",2082,1906,10,1347.0,38,177,1817.5,-90.0,266.2,4,0.383,22,Mid-tier,False
+"Padma Kanya Multiple Campus, Bagbazar",2079,946,24,672.9,58,,946.0,59.1,114.3,4,0.1,7,Top-tier,False
+"Padma Kanya Multiple Campus, Bagbazar",2080,813,57,564.9,58,-133,879.5,59.1,114.3,4,0.117,7,Top-tier,False
+"Padma Kanya Multiple Campus, Bagbazar",2081,1035,60,667.2,58,222,924.0,59.1,114.3,4,0.119,7,Top-tier,False
+"Padma Kanya Multiple Campus, Bagbazar",2082,1069,85,743.8,58,34,1052.0,59.1,114.3,4,0.133,7,Top-tier,False
+"Patan Multiple Campus, Patan Dhoka",2079,465,11,300.7,115,,465.0,7.1,52.5,4,0.033,3,Top-tier,False
+"Patan Multiple Campus, Patan Dhoka",2080,365,3,198.8,115,-100,415.0,7.1,52.5,4,0.05,3,Top-tier,False
+"Patan Multiple Campus, Patan Dhoka",2081,403,3,215.0,115,38,384.0,7.1,52.5,4,0.051,3,Top-tier,False
+"Patan Multiple Campus, Patan Dhoka",2082,476,1,245.1,115,73,439.5,7.1,52.5,4,0.033,3,Top-tier,False
+"Prime College, Nayabazar",2079,1798,510,1236.7,38,,1798.0,-130.7,199.4,4,0.3,13,Top-tier,False
+"Prime College, Nayabazar",2080,1551,231,1097.6,38,-247,1674.5,-130.7,199.4,4,0.2,13,Top-tier,False
+"Prime College, Nayabazar",2081,1660,91,1085.0,38,109,1605.5,-130.7,199.4,4,0.271,13,Top-tier,False
+"Prime College, Nayabazar",2082,1326,54,893.8,38,-334,1493.0,-130.7,199.4,4,0.2,13,Top-tier,False
+"Prithvi Narayan Campus, Pokhara",2079,1044,58,718.1,58,,1044.0,37.6,116.8,4,0.133,8,Top-tier,False
+"Prithvi Narayan Campus, Pokhara",2080,1008,60,681.5,58,-36,1026.0,37.6,116.8,4,0.15,8,Top-tier,False
+"Prithvi Narayan Campus, Pokhara",2081,919,14,605.3,58,-89,963.5,37.6,116.8,4,0.102,8,Top-tier,False
+"Prithvi Narayan Campus, Pokhara",2082,1199,53,754.7,58,280,1059.0,37.6,116.8,4,0.167,8,Top-tier,False
+"Ramsworup Ramsagar Multiple Campus, Janakpur",2079,2222,335,1495.5,29,,2222.0,854.7,1225.1,4,0.383,52,Lower-tier,False
+"Ramsworup Ramsagar Multiple Campus, Janakpur",2080,2628,300,1586.3,58,406,2425.0,854.7,1225.1,4,0.75,52,Lower-tier,False
+"Ramsworup Ramsagar Multiple Campus, Janakpur",2081,4641,273,3186.7,58,2013,3634.5,854.7,1225.1,4,0.932,52,Lower-tier,False
+"Ramsworup Ramsagar Multiple Campus, Janakpur",2082,4400,730,3272.5,58,-241,4520.5,854.7,1225.1,4,0.967,52,Lower-tier,False
+"Sagarmatha College of Science and Technology, Sanepa",2079,2461,497,1611.7,38,,2461.0,-70.3,304.0,4,0.483,28,Mid-tier,False
+"Sagarmatha College of Science and Technology, Sanepa",2080,1731,395,1126.6,38,-730,2096.0,-70.3,304.0,4,0.283,28,Mid-tier,False
+"Sagarmatha College of Science and Technology, Sanepa",2081,2204,186,1628.7,38,473,1967.5,-70.3,304.0,4,0.542,28,Mid-tier,False
+"Sagarmatha College of Science and Technology, Sanepa",2082,2069,133,1427.9,38,-135,2136.5,-70.3,304.0,4,0.467,28,Mid-tier,False
+"Samriddhi College, Lokanthali",2079,1671,186,1161.9,38,,1671.0,-25.2,67.9,4,0.283,14,Top-tier,False
+"Samriddhi College, Lokanthali",2080,1678,437,1028.4,38,7,1674.5,-25.2,67.9,4,0.25,14,Top-tier,False
+"Samriddhi College, Lokanthali",2081,1531,193,1056.9,38,-147,1604.5,-25.2,67.9,4,0.237,14,Top-tier,False
+"Samriddhi College, Lokanthali",2082,1636,380,1181.8,38,105,1583.5,-25.2,67.9,4,0.283,14,Top-tier,False
+"Shreeyantra College, Damak, Jhapa",2079,4324,976,3040.6,38,,4324.0,-316.4,491.0,4,0.95,55,Lower-tier,False
+"Shreeyantra College, Damak, Jhapa",2080,3532,401,2746.7,38,-792,3928.0,-316.4,491.0,4,0.917,55,Lower-tier,False
+"Shreeyantra College, Damak, Jhapa",2081,3221,793,2250.2,38,-311,3376.5,-316.4,491.0,4,0.797,55,Lower-tier,False
+"Shreeyantra College, Damak, Jhapa",2082,3373,280,2364.3,38,152,3297.0,-316.4,491.0,4,0.85,55,Lower-tier,False
+"Siddhanath Science Campus, Mahendranagar",2079,4207,95,2806.3,58,,4207.0,-202.8,461.6,4,0.9,54,Lower-tier,False
+"Siddhanath Science Campus, Mahendranagar",2080,3159,570,2114.9,58,-1048,3683.0,-202.8,461.6,4,0.817,54,Lower-tier,False
+"Siddhanath Science Campus, Mahendranagar",2081,3711,363,2647.3,58,552,3435.0,-202.8,461.6,4,0.864,54,Lower-tier,False
+"Siddhanath Science Campus, Mahendranagar",2082,3347,277,2275.0,58,-364,3529.0,-202.8,461.6,4,0.833,54,Lower-tier,False
+"Soch College, Pokhara",2079,3049,1174,2220.0,29,,3049.0,-170.5,431.4,4,0.717,44,Lower-tier,False
+"Soch College, Pokhara",2080,2533,484,1904.0,29,-516,2791.0,-170.5,431.4,4,0.683,44,Lower-tier,False
+"Soch College, Pokhara",2081,2004,61,1504.1,29,-529,2268.5,-170.5,431.4,4,0.458,44,Lower-tier,False
+"Soch College, Pokhara",2082,2657,319,1972.3,29,653,2330.5,-170.5,431.4,4,0.75,44,Lower-tier,False
+"St. Lawrence College, Chabahil",2079,2271,498,1585.9,29,,2271.0,-108.3,213.2,4,0.433,25,Mid-tier,False
+"St. Lawrence College, Chabahil",2080,1789,515,1312.2,29,-482,2030.0,-108.3,213.2,4,0.35,25,Mid-tier,False
+"St. Lawrence College, Chabahil",2081,1921,487,1409.3,29,132,1855.0,-108.3,213.2,4,0.424,25,Mid-tier,False
+"St. Lawrence College, Chabahil",2082,1866,567,1439.9,29,-55,1893.5,-108.3,213.2,4,0.35,25,Mid-tier,False
+"St. Xaviers College, Maitighar",2079,488,1,271.1,38,,488.0,11.3,124.1,4,0.05,2,Top-tier,False
+"St. Xaviers College, Maitighar",2080,288,4,134.2,38,-200,388.0,11.3,124.1,4,0.017,2,Top-tier,True
+"St. Xaviers College, Maitighar",2081,296,1,143.2,38,8,292.0,11.3,124.1,4,0.017,2,Top-tier,True
+"St. Xaviers College, Maitighar",2082,523,18,252.9,38,227,409.5,11.3,124.1,4,0.05,2,Top-tier,False
+"Swastik College, Bhaktapur, Thimi",2079,2767,835,2087.1,29,,2767.0,-142.2,253.7,4,0.633,36,Mid-tier,False
+"Swastik College, Bhaktapur, Thimi",2080,2298,597,1671.2,29,-469,2532.5,-142.2,253.7,4,0.617,36,Mid-tier,False
+"Swastik College, Bhaktapur, Thimi",2081,2193,788,1702.6,29,-105,2245.5,-142.2,253.7,4,0.525,36,Mid-tier,False
+"Swastik College, Bhaktapur, Thimi",2082,2328,690,1701.6,29,135,2260.5,-142.2,253.7,4,0.583,36,Mid-tier,False
+"Texas International College, Chabahil",2079,2375,789,1815.2,38,,2375.0,-247.3,344.5,4,0.45,23,Mid-tier,False
+"Texas International College, Chabahil",2080,1851,436,1253.5,38,-524,2113.0,-247.3,344.5,4,0.383,23,Mid-tier,False
+"Texas International College, Chabahil",2081,1700,195,1172.1,38,-151,1775.5,-247.3,344.5,4,0.288,23,Mid-tier,False
+"Texas International College, Chabahil",2082,1601,504,1134.4,38,-99,1650.5,-247.3,344.5,4,0.267,23,Mid-tier,False
+"Tribhuvan Multiple Campus, Palpa",2082,1696,40,708.3,29,,1696.0,,,1,0.3,16,Top-tier,False
+"Trinity International College, Dillibazar",2079,1654,560,1209.9,38,,1654.0,-61.1,175.3,4,0.267,12,Top-tier,False
+"Trinity International College, Dillibazar",2080,1681,405,1137.0,38,27,1667.5,-61.1,175.3,4,0.267,12,Top-tier,False
+"Trinity International College, Dillibazar",2081,1298,421,924.1,38,-383,1489.5,-61.1,175.3,4,0.186,12,Top-tier,False
+"Trinity International College, Dillibazar",2082,1578,430,1012.3,38,280,1438.0,-61.1,175.3,4,0.25,12,Top-tier,False
+"Vedas College, Jaulakhel",2079,2752,844,2102.1,38,,2752.0,-100.4,280.6,4,0.617,35,Mid-tier,False
+"Vedas College, Jaulakhel",2080,2137,507,1644.8,38,-615,2444.5,-100.4,280.6,4,0.533,35,Mid-tier,False
+"Vedas College, Jaulakhel",2081,2183,566,1555.3,38,46,2160.0,-100.4,280.6,4,0.508,35,Mid-tier,False
+"Vedas College, Jaulakhel",2082,2402,1145,2039.0,38,219,2292.5,-100.4,280.6,4,0.617,35,Mid-tier,False
