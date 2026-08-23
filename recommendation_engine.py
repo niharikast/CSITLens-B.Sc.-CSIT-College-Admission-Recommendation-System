@@ -104,17 +104,32 @@ def match_college_name(user_input: str, master_df: pd.DataFrame, threshold: int 
     *some substring* of each candidate, which handles this correctly —
     WRatio and token_sort_ratio were both found to mismatch short queries
     like "Kathford" to unrelated colleges during testing.
-    Returns (canonical_name, score) or (None, 0) if nothing crosses the
-    threshold.
+
+    A generic fragment shared by many colleges (e.g. "College" or
+    "Multiple Campus") scores equally well — often 100 — against several
+    real, unrelated colleges. Picking whichever one rapidfuzz happens to
+    return first and reporting it at full confidence would be misleading,
+    so any other college tied at the same top score is surfaced as
+    `ambiguous_candidates` rather than silently discarded.
+
+    Returns (canonical_name, score, ambiguous_candidates):
+      - (None, 0, None) if nothing crosses the threshold.
+      - (canonical_name, score, None) for a clean, unambiguous match.
+      - (canonical_name, score, [other_names...]) when other colleges tied
+        at the same score — `canonical_name` is still the best guess, but
+        the caller should flag it as unconfirmed rather than certain.
     """
     choices = master_df['College'].tolist()
     result = process.extractOne(user_input, choices, scorer=fuzz.partial_ratio)
     if result is None:
-        return None, 0
+        return None, 0, None
     match, score, _ = result
     if score < threshold:
-        return None, 0
-    return match, score
+        return None, 0, None
+    tied = process.extract(user_input, choices, scorer=fuzz.partial_ratio,
+                            score_cutoff=score, limit=None)
+    others = sorted({name for name, _score, _idx in tied if name != match})
+    return match, score, (others or None)
 
 
 SOURCE_MATCH_GAP_THRESHOLD = 150  # rank positions; beyond this, the "closest"
@@ -236,13 +251,14 @@ def recommend_from_preference_list(student_rank: int, preference_list: list,
 
     rows = []
     for i, pref in enumerate(preference_list):
-        matched_name, match_score = match_college_name(pref, master_df)
+        matched_name, match_score, ambiguous_candidates = match_college_name(pref, master_df)
         if matched_name is None:
             row = {
                 'User_Input': pref, 'Matched_College': None,
                 'Admission_Probability': None, 'Probability_Label': 'Not Found',
                 'Name_Match_Confidence': 0, 'Probability_Source': None,
                 'Destination_Cutoff_Rank': None, 'Rank_Gap': None,
+                'Name_Match_Ambiguous': False, 'Ambiguous_Candidates': None,
             }
             if classifier is None:
                 row['Destination_Rank'] = None
@@ -276,6 +292,8 @@ def recommend_from_preference_list(student_rank: int, preference_list: list,
             # probability method is active.
             'Destination_Cutoff_Rank': dest_cutoff,
             'Rank_Gap': (dest_cutoff - student_rank) if dest_cutoff is not None else None,
+            'Name_Match_Ambiguous': ambiguous_candidates is not None,
+            'Ambiguous_Candidates': ', '.join(ambiguous_candidates) if ambiguous_candidates else None,
         }
         # Destination_Rank/Score only shown when they're actually driving the
         # result (rule-based mode). When the classifier is used, these

@@ -119,7 +119,13 @@ column order.
   alongside a probability they didn't actually produce.
 - `match_college_name()` fuzzy-matches free-text user input (e.g. "Kathford") to a canonical college
   name using rapidfuzz's `partial_ratio` specifically — `WRatio`/`token_sort_ratio` were tried and found
-  to mismatch short queries during testing.
+  to mismatch short queries during testing. Returns a 3-tuple `(canonical_name, score,
+  ambiguous_candidates)`: a generic fragment shared by several colleges (e.g. "College", "Multiple
+  Campus") can score 100 against all of them, so any other college tied at the same top score is
+  returned as `ambiguous_candidates` instead of silently reporting one arbitrary pick at full
+  confidence. `recommend_from_preference_list()` surfaces this as `Name_Match_Ambiguous` (bool) /
+  `Ambiguous_Candidates` (comma-joined string or `None`) columns, and `frontend/app.js` renders a
+  warning line on that preference's ticket when set.
 - `top5_by_cutoff()` computes the Source-Destination score explicitly for every college and returns the
   Source College plus the next 4 easiest colleges (Score >= 0, ascending). Can legitimately return fewer
   than 5 rows if the Source College is near the bottom of the master ranking.

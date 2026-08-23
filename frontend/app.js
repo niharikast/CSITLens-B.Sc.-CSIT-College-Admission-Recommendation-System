@@ -171,12 +171,18 @@ function renderTicketList(preferences) {
     const gapDisplay = gap == null ? '—' : (gap >= 0 ? `+${gap}` : `${gap}`);
     const pct = p.Admission_Probability != null ? Math.round(p.Admission_Probability * 100) : null;
     const badgeText = pct != null ? `${pct}% · ${p.Probability_Label}` : p.Probability_Label;
+    // A generic fragment (e.g. "College") can match several real colleges
+    // equally well -- surface that instead of presenting a guess as certain.
+    const ambiguousNote = p.Name_Match_Ambiguous
+      ? `<p class="loc">⚠ "${p.User_Input}" is ambiguous — also matches ${p.Ambiguous_Candidates}. Type a more specific name to confirm.</p>`
+      : '';
     return `<div class="ticket">
       <div class="stub"><div class="num">${cutoff}</div><div class="lbl">cutoff</div></div>
       <div class="body">
         <div class="info">
           <p class="college">${collegeShortName(p.Matched_College)}</p>
           <p class="loc">${collegeLoc(p.Matched_College)}</p>
+          ${ambiguousNote}
         </div>
         <div class="side">
           <span class="gapval">${gapDisplay}</span>
