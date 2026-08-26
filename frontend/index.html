@@ -139,10 +139,12 @@
   }
 
   .combobox{position:relative;}
+  .combobox-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--faint);pointer-events:none;}
   .combobox-input{
     width:100%;background:var(--paper);border:1px solid var(--line-strong);
-    color:var(--ink);border-radius:4px;padding:0 14px;height:42px;font-size:13.5px;font-family:inherit;
+    color:var(--ink);border-radius:4px;padding:0 14px 0 38px;height:42px;font-size:13.5px;font-family:inherit;
   }
+  .combobox-input::placeholder{color:var(--muted);opacity:1;}
   .combobox-input:focus{outline:none;border-color:var(--blue);}
   .combobox-input:disabled{opacity:.5;cursor:default;}
   .combobox-panel{
@@ -165,7 +167,6 @@
   }
   .btn-primary:hover{background:var(--blue-dark);}
   .btn-primary:disabled{opacity:.6;cursor:default;}
-  .basis-note{font-size:12px;color:var(--faint);}
 
   /* ---------- section headings ---------- */
   section{padding:52px 0;}
@@ -318,6 +319,10 @@
       </div>
       <div class="selected-list" id="selectedList"></div>
       <div class="combobox" id="collegeCombobox">
+        <svg class="combobox-icon" width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <circle cx="7" cy="7" r="5.25" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="11.1" y1="11.1" x2="14.5" y2="14.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
         <input type="text" id="collegeSearch" class="combobox-input" autocomplete="off"
           placeholder="Loading colleges…" disabled aria-label="Search colleges to add"
           oninput="renderComboboxPanel(this.value)" onfocus="openCollegePanel()" onkeydown="handleComboboxKey(event)" />
@@ -326,7 +331,6 @@
 
       <div class="cta-row">
         <button class="btn-primary" id="evalBtn" onclick="evaluateNow()">Evaluate My Chances</button>
-        <span class="basis-note" id="basisNote">Loading college list…</span>
       </div>
     </div>
   </section>

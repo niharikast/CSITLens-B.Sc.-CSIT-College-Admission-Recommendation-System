@@ -37,19 +37,16 @@ function toneFor(label) {
 
 async function loadColleges() {
   const searchInput = document.getElementById('collegeSearch');
-  const basisNote = document.getElementById('basisNote');
   try {
     const res = await fetch('/colleges');
     if (!res.ok) throw new Error(`Server returned ${res.status}`);
     COLLEGES = await res.json();
-    basisNote.textContent = `Cutoff basis: ${COLLEGES.length} colleges on file · admission classifier`;
     searchInput.disabled = false;
     searchInput.placeholder = 'Search colleges to add…';
     renderSelectedList();
   } catch (err) {
     searchInput.disabled = true;
     searchInput.placeholder = 'Failed to load colleges';
-    basisNote.textContent = '';
     document.getElementById('selectedList').innerHTML =
       `<div class="error-note">Could not reach the server to load the college list (${err.message}). Make sure the API is running and reload the page.</div>`;
   }
