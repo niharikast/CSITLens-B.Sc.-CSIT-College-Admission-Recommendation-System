@@ -36,20 +36,19 @@ function toneFor(label) {
 }
 
 async function loadColleges() {
-  const select = document.getElementById('collegeSelect');
-  const addBtn = document.getElementById('addBtn');
+  const searchInput = document.getElementById('collegeSearch');
   const basisNote = document.getElementById('basisNote');
   try {
     const res = await fetch('/colleges');
     if (!res.ok) throw new Error(`Server returned ${res.status}`);
     COLLEGES = await res.json();
     basisNote.textContent = `Cutoff basis: ${COLLEGES.length} colleges on file · admission classifier`;
-    renderCollegeSelect();
+    searchInput.disabled = false;
+    searchInput.placeholder = 'Search colleges to add…';
     renderSelectedList();
   } catch (err) {
-    select.innerHTML = '<option value="">Failed to load colleges</option>';
-    select.disabled = true;
-    addBtn.disabled = true;
+    searchInput.disabled = true;
+    searchInput.placeholder = 'Failed to load colleges';
     basisNote.textContent = '';
     document.getElementById('selectedList').innerHTML =
       `<div class="error-note">Could not reach the server to load the college list (${err.message}). Make sure the API is running and reload the page.</div>`;
@@ -61,20 +60,21 @@ function adjustRank(delta) {
   input.value = Math.max(1, parseInt(input.value || 0, 10) + delta);
 }
 
-function addCollege() {
-  const sel = document.getElementById('collegeSelect');
-  const name = sel.value;
+function selectCollege(name) {
   if (name && !selectedNames.includes(name)) {
     selectedNames.push(name);
     renderSelectedList();
-    renderCollegeSelect();
   }
+  const input = document.getElementById('collegeSearch');
+  input.value = '';
+  input.focus();
+  renderComboboxPanel('');
 }
 
 function removeCollege(name) {
   selectedNames = selectedNames.filter(x => x !== name);
   renderSelectedList();
-  renderCollegeSelect();
+  renderComboboxPanel(document.getElementById('collegeSearch').value);
 }
 
 function moveCollege(index, delta) {
@@ -90,7 +90,7 @@ function renderSelectedList() {
   const hint = document.getElementById('countHint');
   hint.textContent = selectedNames.length + ' added';
   if (selectedNames.length === 0) {
-    container.innerHTML = '<div class="empty-note">You haven\'t added any colleges yet — add one below to see how your rank compares.</div>';
+    container.innerHTML = '<div class="empty-note">You haven\'t added any colleges yet. Add one below to see how your rank compares.</div>';
     return;
   }
   container.innerHTML = selectedNames.map((name, i) => `
@@ -108,20 +108,45 @@ function renderSelectedList() {
     </div>`).join('');
 }
 
-function renderCollegeSelect() {
-  const sel = document.getElementById('collegeSelect');
-  const addBtn = document.getElementById('addBtn');
+function renderComboboxPanel(filterText) {
+  const panel = document.getElementById('collegePanel');
+  const q = (filterText || '').trim().toLowerCase();
   const available = COLLEGES.filter(c => !selectedNames.includes(c.College));
+
   if (available.length === 0) {
-    sel.innerHTML = '<option value="">All colleges added</option>';
-    sel.disabled = true;
-    addBtn.disabled = true;
+    panel.innerHTML = '<div class="combobox-empty">All colleges added</div>';
     return;
   }
-  sel.disabled = false;
-  addBtn.disabled = false;
-  sel.innerHTML = '<option value="">Select a college to add…</option>' +
-    available.map(c => `<option value="${c.College}">${collegeShortName(c.College)} — ${collegeLoc(c.College)}</option>`).join('');
+  const filtered = q ? available.filter(c => c.College.toLowerCase().includes(q)) : available;
+  if (filtered.length === 0) {
+    panel.innerHTML = `<div class="combobox-empty">No colleges match "${filterText}"</div>`;
+    return;
+  }
+  panel.innerHTML = filtered.map(c => `
+    <div class="combobox-item" onclick="selectCollege('${c.College.replace(/'/g, "\\'")}')">
+      <div class="name">${collegeShortName(c.College)}</div>
+      <div class="loc">${collegeLoc(c.College)}</div>
+    </div>`).join('');
+}
+
+function openCollegePanel() {
+  document.getElementById('collegePanel').hidden = false;
+  renderComboboxPanel(document.getElementById('collegeSearch').value);
+}
+
+function closeCollegePanel() {
+  document.getElementById('collegePanel').hidden = true;
+}
+
+function handleComboboxKey(e) {
+  if (e.key === 'Escape') {
+    closeCollegePanel();
+    e.target.blur();
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    const first = document.querySelector('#collegePanel .combobox-item');
+    if (first) first.click();
+  }
 }
 
 function renderBestCallout(best) {
@@ -274,5 +299,14 @@ async function evaluateNow() {
     setEvaluating(false);
   }
 }
+
+document.addEventListener('click', (e) => {
+  const combo = document.getElementById('collegeCombobox');
+  // Use composedPath (captured at dispatch time), not contains(e.target): selecting a
+  // college replaces the panel's innerHTML, detaching the clicked row from the DOM before
+  // this listener runs, which made contains() wrongly report "click was outside" and close
+  // the panel right after every selection.
+  if (combo && !e.composedPath().includes(combo)) closeCollegePanel();
+});
 
 loadColleges();

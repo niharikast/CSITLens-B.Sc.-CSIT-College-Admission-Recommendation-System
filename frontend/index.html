@@ -138,17 +138,24 @@
     border-radius:4px;text-align:center;margin-bottom:14px;background:var(--paper);
   }
 
-  .add-row{display:flex;gap:8px;}
-  select{
-    flex:1;background:var(--paper);border:1px solid var(--line-strong);
-    color:var(--ink);border-radius:4px;padding:0 12px;height:42px;font-size:13.5px;font-family:inherit;
+  .combobox{position:relative;}
+  .combobox-input{
+    width:100%;background:var(--paper);border:1px solid var(--line-strong);
+    color:var(--ink);border-radius:4px;padding:0 14px;height:42px;font-size:13.5px;font-family:inherit;
   }
-  .btn-add{
-    background:var(--paper);border:1px solid var(--line-strong);color:var(--ink);
-    border-radius:4px;padding:0 18px;font-size:13.5px;font-weight:600;cursor:pointer;transition:.15s;
+  .combobox-input:focus{outline:none;border-color:var(--blue);}
+  .combobox-input:disabled{opacity:.5;cursor:default;}
+  .combobox-panel{
+    position:absolute;top:calc(100% + 6px);left:0;right:0;z-index:20;
+    background:var(--paper);border:1px solid var(--line-strong);border-radius:4px;
+    max-height:280px;overflow-y:auto;box-shadow:0 10px 28px rgba(28,37,49,0.14);
   }
-  .btn-add:hover{border-color:var(--blue);color:var(--blue-dark);}
-  .btn-add:disabled, select:disabled{opacity:.5;cursor:default;}
+  .combobox-item{padding:9px 14px;cursor:pointer;border-bottom:1px solid var(--line);}
+  .combobox-item:last-child{border-bottom:0;}
+  .combobox-item:hover{background:var(--blue-tint);}
+  .combobox-item .name{font-size:13.5px;font-weight:600;color:var(--ink);}
+  .combobox-item .loc{font-size:11.5px;color:var(--faint);margin-top:1px;}
+  .combobox-empty{padding:14px;font-size:13px;color:var(--faint);text-align:center;}
 
   .cta-row{margin-top:22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
   .btn-primary{
@@ -309,9 +316,11 @@
         <span class="field-hint" id="countHint"></span>
       </div>
       <div class="selected-list" id="selectedList"></div>
-      <div class="add-row">
-        <select id="collegeSelect" disabled><option value="">Loading colleges…</option></select>
-        <button class="btn-add" id="addBtn" onclick="addCollege()" disabled>Add college</button>
+      <div class="combobox" id="collegeCombobox">
+        <input type="text" id="collegeSearch" class="combobox-input" autocomplete="off"
+          placeholder="Loading colleges…" disabled aria-label="Search colleges to add"
+          oninput="renderComboboxPanel(this.value)" onfocus="openCollegePanel()" onkeydown="handleComboboxKey(event)" />
+        <div class="combobox-panel" id="collegePanel" hidden></div>
       </div>
 
       <div class="cta-row">
@@ -388,12 +397,6 @@
           <a href="#evaluate">Check my rank</a>
           <a href="#how-it-works">How it works</a>
           <a href="#recommendations">Recommendations</a>
-        </div>
-        <div class="foot-col">
-          <h4>About</h4>
-          <a href="#">Where the cutoffs come from</a>
-          <a href="#">Contact us</a>
-          <a href="#">Privacy</a>
         </div>
       </div>
     </div>
