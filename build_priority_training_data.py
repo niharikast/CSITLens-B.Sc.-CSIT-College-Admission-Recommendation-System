@@ -7,7 +7,7 @@ priority lists + their actual admission outcome.
 For each student, their priority list tells us all the colleges they
 wanted, in order. Their actual admitted college (from the original
 roll-level xlsx) tells us where the automated merit-based allocation
-process stopped. Nepal's CEE allocation is sequential: a student is
+process stopped. IOST's BSc CSIT allocation is sequential: a student is
 placed at the highest-priority college where a seat is still available
 for their rank. So:
 
