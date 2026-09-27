@@ -365,12 +365,12 @@ def top5_by_cutoff(student_rank: int, master_df: pd.DataFrame,
     note = None
     if len(result) == 1:
         note = (f"{source_row['College']} is the least selective college on "
-                 f"record (Master Rank #{source_rank_pos} of {total_colleges}) "
-                 f"— there are no easier colleges left to recommend below it.")
+                 f"record (Master Rank #{source_rank_pos} of {total_colleges}), "
+                 f"so there are no easier colleges left to recommend below it.")
     elif len(result) < 5:
         note = (f"Only {len(result)} colleges, including the Source College, "
                  f"are at or below Master Rank #{source_rank_pos} of "
-                 f"{total_colleges} — there aren't enough easier colleges on "
+                 f"{total_colleges}, so there aren't enough easier colleges on "
                  f"record to fill a Top-5 list.")
 
     return result, note

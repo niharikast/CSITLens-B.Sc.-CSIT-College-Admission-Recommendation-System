@@ -196,7 +196,7 @@ function renderTicketList(preferences) {
     // A generic fragment (e.g. "College") can match several real colleges
     // equally well -- surface that instead of presenting a guess as certain.
     const ambiguousNote = p.Name_Match_Ambiguous
-      ? `<p class="loc">⚠ "${p.User_Input}" is ambiguous — also matches ${p.Ambiguous_Candidates}. Type a more specific name to confirm.</p>`
+      ? `<p class="loc">⚠ "${p.User_Input}" is ambiguous, also matches ${p.Ambiguous_Candidates}. Type a more specific name to confirm.</p>`
       : '';
     return `<div class="ticket">
       <div class="stub"><div class="num">${cutoff}</div><div class="lbl">cutoff</div></div>
@@ -222,7 +222,7 @@ function renderRecommendations(top5, sourceCollege, top5Note) {
     return;
   }
   const weakWarning = sourceCollege && sourceCollege.Source_Match_Is_Weak
-    ? `<div class="error-note">No college closely matches this rank (nearest cutoff is ${Math.round(sourceCollege.Source_Match_Gap)} rank positions away) — treat these recommendations with caution.</div>`
+    ? `<div class="error-note">No college closely matches this rank (nearest cutoff is ${Math.round(sourceCollege.Source_Match_Gap)} rank positions away), so treat these recommendations with caution.</div>`
     : '';
   const shortListNote = top5Note ? `<div class="error-note">${top5Note}</div>` : '';
   container.innerHTML = weakWarning + shortListNote + top5.map(c => {
